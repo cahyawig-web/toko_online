@@ -1,0 +1,230 @@
+/* Reset & Font Utama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #faf5ff; /* Background utama halaman (Cream/Purple sangat lembut) */
+    color: #4c1d95; /* Teks utama ungu gelap */
+}
+
+/* Header & Navigasi */
+header {
+    background: linear-gradient(135deg, #3b0764, #581c87); /* Gradasi Ungu Tua */
+    color: #fef3c7; /* Warna Cream */
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+header p {
+    color: #e9d5ff; /* Ungu/Cream pastel */
+    margin-top: 5px;
+}
+
+nav {
+    background-color: #3b0764;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #fde68a; /* Teks Navigasi Warna Cream */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff; /* Putih saat disorot */
+}
+
+/* Container Utama */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Section Banner */
+.banner {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);
+    margin-bottom: 35px;
+    border: 1px solid #f3e8ff;
+}
+
+.banner h2 {
+    color: #3b0764;
+    margin-bottom: 8px;
+}
+
+.banner p {
+    color: #6b21a8;
+    margin-bottom: 20px;
+}
+
+/* Section Produk & Wadah Scroll */
+#produk {
+    background-color: #ffffff; /* Background putih untuk area produk */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);
+    margin-bottom: 35px;
+    border: 1px solid #f3e8ff;
+}
+
+#produk h2 {
+    font-size: 1.5rem;
+    color: #3b0764;
+    margin-bottom: 18px;
+}
+
+/* Area Tempat Produk Berjejer & Bisa Di-scroll */
+.daftar-produk {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto; /* Memungkinkan scroll ke samping */
+    padding: 15px;
+    background-color: #fcf8ff; /* Background khusus area scroll produk (Sentuhan cream/ungu muda) */
+    border-radius: 14px;
+    border: 1px solid #f3e8ff;
+    scroll-snap-type: x mandatory;
+}
+
+/* Desain Kotak (Card) Masing-Masing Produk */
+.produk {
+    flex: 0 0 260px; /* Ukuran lebar kotak produk tetap seragam */
+    scroll-snap-align: start;
+    background: #ffffff;
+    border: 2px solid #e9d5ff; /* Garis tepi kotak nuansa ungu muda */
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.06); /* Bayangan kotak ungu lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efek saat Kursor Diarahkan ke Kotak Produk */
+.produk:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(124, 58, 237, 0.12);
+    border-color: #7c3aed; /* Warna garis tepi berubah ungu terang saat ditunjuk */
+}
+
+.produk h3 {
+    font-size: 1.2rem;
+    color: #3b0764;
+    margin-bottom: 8px;
+}
+
+.produk p {
+    font-size: 0.9rem;
+    color: #6b21a8;
+    margin-bottom: 10px;
+}
+
+.produk .harga {
+    font-weight: 700;
+    color: #059669; /* Tetap hijau atau bisa diganti sesuai selera */
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+}
+
+/* Desain Tombol & Perubahan Warna Saat Diklik */
+.tombol, .produk button {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #7c3aed; /* Warna Ungu Utama */
+    color: #fef3c7; /* Teks Tombol Warna Cream */
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.3);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 15px;
+}
+
+/* Warna saat Kursor Diarahkan (Hover) */
+.tombol:hover, .produk button:hover {
+    background-color: #6d28d9; /* Ungu lebih gelap saat disorot */
+    box-shadow: 0 6px 12px -1px rgba(109, 40, 217, 0.4);
+    color: #ffffff;
+}
+
+/* Warna saat Ditekan/Diklik (Active) */
+.tombol:active, .produk button:active {
+    background-color: #581c87; /* Ungu sangat pekat saat diklik */
+    transform: scale(0.95); /* Efek membal mengecil sedikit saat dipencet */
+}
+
+/* Gambar Produk di Bagian Bawah */
+.produk img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #f3e8ff;
+}
+
+/* Tampilan Scrollbar */
+.daftar-produk::-webkit-scrollbar {
+    height: 10px;
+}
+
+.daftar-produk::-webkit-scrollbar-track {
+    background: #f3e8ff;
+    border-radius: 10px;
+}
+
+.daftar-produk::-webkit-scrollbar-thumb {
+    background: #d8b4fe;
+    border-radius: 10px;
+}
+
+.daftar-produk::-webkit-scrollbar-thumb:hover {
+    background: #c084fc;
+}
+
+/* Section Tentang & Kontak */
+.tentang, .kontak {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid #f3e8ff;
+    box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #3b0764;
+    color: #e9d5ff;
+    margin-top: 40px;
+}
